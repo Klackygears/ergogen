@@ -1,0 +1,322 @@
+meta:
+  engine: 4.0.4
+  name: archaeoptereeks
+  version: 0.1
+  ref: &kb_ref "Archaeoptereeks"
+  author: klackygears
+#  url: &kb_url null
+  footprint: &switch_footprint "choc_v1"
+  switch:
+    $extends: presets.choc_v1
+
+presets:
+  # These presets provide different layout options
+  # Select a preset in the `units` section below
+  # Note: The appropriate switch footprint will still need to be set in the `pcb` section
+  mx:
+    # Key and keycap measures
+    kx: u # spacing between key centers (X-axis)
+    ky: u # spacing between key centers (Y-axis)
+    ks: 19 # horizontal space between columns (default: 19)
+    kp: 19 # vertical padding between keys (deafult: 19)
+    kcow: 14 # key cutout hole width (cherry: 14, choc: 13.8)
+    kcoh: 14 # key cutout hole height (cherry: 14, choc: 13.8)
+    keycw: 18 # keycap width (cherry: 18, choc: 17.5)
+    keych: 18 # keycap height (cherry: 18, choc: 16.5)
+    led_pos_x: 0 # Led X position relative to the switch center
+    led_pos_y: -4.75 # Led Y position relative to the switch center
+    led_rotation: 180 # Led rotation
+    vertical_underglow_shift: -0.5 kp # How much to shift underglow leds tied to keys
+    vertical_diode_shift: 1.325 # How much to shift to avoid overlap
+    horizontal_diode_shift: 7
+    diode_rotation: 0 # Diode rotation
+    switch_rotation: 0 # Hotswap north, led south
+  choc_v1:
+    # Key and keycap measures
+    kx: cx # spacing between key centers (X-axis)
+    ky: cy # spacing between key centers (Y-axis)
+    ks: 18.5 # horizontal space between columns (default: 19)
+    kp: 17.5 # vertical padding between keys (deafult: 19)
+    kcow: 13.8 # key cutout hole width (cherry, choc v2: 14, choc v1: 13.8)
+    kcoh: 13.8 # key cutout hole height (cherry, choc v2: 14, choc v1: 13.8)
+    keycw: 17.5 # keycap width (cherry: 18, choc: 17.5)
+    keych: 16.5 # keycap height (cherry: 18, choc: 16.5)
+    led_pos_x: 0 # Led X position relative to the switch center
+    led_pos_y: 4.7 # Led Y position relative to the switch center
+    led_rotation: 0 # Led rotation
+    vertical_underglow_shift: -kp + 7.8  # How much to shift underglow leds tied to keys
+    vertical_diode_shift: 1.5 # How much to shift to avoid overlap
+    horizontal_diode_shift: -0.5 kcow - 0.85
+    diode_rotation: -180 # Diode rotation
+    switch_rotation: 180 # Hotswap south, led north
+  choc_v1_mx_spacing:
+    # Key and keycap measures
+    $extends: presets.choc_v1
+    kx: u # spacing between key centers (X-axis)
+    ky: u # spacing between key centers (Y-axis)
+    ks: 19 # horizontal space between columns (default: 19)
+    kp: 19 # vertical padding between keys (deafult: 19)
+
+  
+  
+units:
+  kx: cx
+  ky: cy
+  px: kx + 2
+  py: ky + 2
+
+points:
+  zones:
+    matrix:
+      anchor:
+        rotate: 8
+      columns:
+        pinky.key:
+          column_net: P0
+          mirror.column_net: P10
+          led_prev: LED_1
+          led_next: LED_2
+        ring.key:
+          splay: -10
+          # hinge at the bottom right corner
+          # of the bottom pinky's 14x14 hole
+          # for historical reasons...
+          origin: [-12, -19]
+          stagger: 18
+          column_net: P2
+          mirror.column_net: P16
+        middle.key:
+          splay: -5
+          origin: [-12, -19]
+          stagger: 14
+          column_net: P3
+          mirror.column_net: P14
+        index.key:
+          splay: -5
+          origin: [-12, -19]
+          stagger: -10
+          column_net: P4
+          mirror.column_net: P15
+        inner.key:
+          stagger: -2
+          column_net: P5
+          mirror.column_net: P18
+          
+      rows:
+        bottom:
+          row_net: P6
+        home:
+          row_net: P8
+        top:
+          row_net: P9
+    thumbfan:
+      anchor:
+        ref: matrix_inner_bottom
+        shift: [-4, -19]
+      columns:
+        near.key:
+          column_net: P2
+          mirror.column_net: P14
+        home.key:
+          spread: 19
+          splay: -18
+          origin: [-11, -9]
+          column_net: P3
+          mirror.column_net: P16
+        far.key:
+          spread: 19
+          splay: -18
+          origin: [-10.5, -9]
+          column_net: P4
+          mirror.column_net: P10
+      rows:
+        thumb:
+          row_net: P7
+    thumbfan2:
+      anchor:
+        ref: matrix_inner_bottom
+        shift: [20, 1]
+      columns:
+        home.key:
+          spread: 
+          splay: -18
+          origin: [-16, -13]
+          column_net: P5
+          mirror.column_net: P15
+      rows:
+        thumb:
+          row_net: P7
+  rotate: -20
+  mirror:
+    ref: matrix_pinky_home
+    distance: 216
+
+outlines:
+  raw:
+    - what: rectangle
+      where: true
+      bound: true
+      size: [kx+5, ky+5]
+  keys:
+    - what: rectangle
+      where: true
+      bound: false
+      size: [kx-0.5,ky-0.5]
+  board:
+    - what: polygon
+      operation: stack
+      points:
+          #left side
+        - ref: matrix_pinky_top
+          shift: [-.8kx,.8ky]
+        - ref: matrix_pinky_bottom
+          shift: [-.8kx,-.8ky]
+        - ref: matrix_pinky_bottom
+          shift: [.8kx,-.8ky]
+
+          #bottom
+        - ref: thumbfan_home_thumb
+          shift: [-.4kx,-.8ky]
+        - ref: thumbfan_home_thumb
+          shift: [.4kx,-.8ky]
+        - ref: thumbfan_far_thumb
+          shift: [.7kx,-.8ky]
+        - ref: mirror_thumbfan_far_thumb
+          shift: [.7kx,-.8ky]
+        - ref: mirror_thumbfan_home_thumb
+          shift: [.4kx,-.8ky]
+        - ref: mirror_thumbfan_home_thumb
+          shift: [-.4kx,-.8ky]
+          
+          #right side
+        - ref: mirror_matrix_pinky_bottom
+          shift: [.8kx,-.8ky]
+        - ref: mirror_matrix_pinky_bottom
+          shift: [-.8kx,-.8ky]
+        - ref: mirror_matrix_pinky_top
+          shift: [-.8kx,.8ky]
+
+          #right top
+        #- ref: mirror_matrix_ring_top
+        #  shift: [-.8kx,-.25ky]
+        - ref: mirror_matrix_ring_top
+          shift: [-.8kx,.8ky]
+        #- ref: mirror_matrix_middle_top
+        #  shift: [-.8kx,0]
+        - ref: mirror_matrix_middle_top
+          shift: [-.8kx,.8ky]
+        - ref: mirror_matrix_middle_top
+          shift: [.2kx,.8ky]
+        - ref: mirror_matrix_middle_top
+          shift: [.9kx,1.4ky]
+          
+          #mcu
+        - ref: matrix_index_top
+          shift: [kx,56]
+        - ref: matrix_index_top
+          shift: [-12,48]
+        - ref: matrix_index_top
+          shift: [-12,40]
+        - ref: matrix_index_top
+          shift: [0,40]
+        - ref: matrix_index_top
+          shift: [0,30]
+        - ref: matrix_index_top
+          shift: [-12,30]
+
+          #left top
+        - ref: matrix_middle_top
+          shift: [.78kx,.8ky]
+        - ref: matrix_middle_top
+          shift: [-.8kx,.8ky]
+        #- ref: matrix_middle_top
+        #  shift: [-.8kx,0]
+        - ref: matrix_ring_top
+          shift: [-.8kx,.8ky]
+        #- ref: matrix_ring_top
+        #  shift: [-.8kx,-.25ky]
+
+      fillet: 2
+pcbs:
+  base:
+    outlines:
+      main:
+        outline: board
+    footprints:
+      choc:
+        what: choc
+        where: true
+        params:
+          keycaps: true
+          reverse: [false,true]
+          hotswap: false
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+      diode:
+        what: diode
+        where: true
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          rotate: 90
+          shift: [9,-1]
+
+      mcu:
+        what: infused-kim/nice_nano_pretty
+        where: matrix_inner_top
+        params:
+          P0: DAT
+          P1: LED
+          P21: C0
+          P20: C1
+          P19: C2
+          P18: C3
+          P15: C4
+          P14: C5
+          P2: SDA
+          P3: SCL
+          P4: CS
+          P5: R0
+          P6: R1
+          P7: R2
+          P8: R3
+          traces: true
+          show_instructions: false
+          show_silk_labels: true
+          show_via_labels: true
+        adjust:
+          shift: [6,35]
+
+
+      reset:
+        what: button
+        params:
+          from: GND
+          to: RST
+        where:
+          ref.aggregate.parts: [matrix_index_top]
+          shift: [20,51]
+          rotate: 0
+
+      per_key_leds:
+        what: sk6812mini-e
+        where: /key/
+        params:
+          P1: VCC
+          P2: "{{key.led_next}}" #DOUT
+          P3: GND
+          P4: "{{key.led_prev}}" #DIN
+          reversible: true
+          reverse_mount: true
+          add_traces_vias: true
+          add_keepout: false
+          add_courtyard: false
+          gnd_trace_width: gnd_trace_width
+          pwr_trace_width: pwr_trace_width
+          signal_trace_width: signal_trace_width
+          via_size: via_size
+          via_drill: via_drill
+        adjust:
+          shift: [led_pos_x, led_pos_y]
+          rotate: led_rotation

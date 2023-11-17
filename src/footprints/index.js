@@ -17,4 +17,7 @@ module.exports = {
     slider: require('./slider'),
     trrs: require('./trrs'),
     via: require('./via'),
+    nice_nano_pretty: require('./nice_nano_pretty'),
+    nice_nano_rot: require('./nice_nano_rot'),
+    sk6812minie: require('./sk6812mini-e')
 }

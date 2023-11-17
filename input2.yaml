@@ -5,17 +5,39 @@ meta:
   ref: &kb_ref "Archaeoptereeks"
   author: klackygears
 #  url: &kb_url null
+  footprint: &switch_footprint "choc"
+  switch:
+    $extends: presets.choc
 
-  
+presets:
+  # These presets provide different layout options
+  # Select a preset in the `units` section below
+  # Note: The appropriate switch footprint will still need to be set in the `pcb` section
+  choc:
+    # Key and keycap measures
+    kx: cx # spacing between key centers (X-axis)
+    ky: cy # spacing between key centers (Y-axis)
+    ks: 18.5 # horizontal space between columns (default: 19)
+    kp: 17.5 # vertical padding between keys (deafult: 19)
+    kcow: 13.8 # key cutout hole width (cherry, choc v2: 14, choc v1: 13.8)
+    kcoh: 13.8 # key cutout hole height (cherry, choc v2: 14, choc v1: 13.8)
+    keycw: 17.5 # keycap width (cherry: 18, choc: 17.5)
+    keych: 16.5 # keycap height (cherry: 18, choc: 16.5)
+    led_pos_x: 0 # Led X position relative to the switch center
+    led_pos_y: 4.7 # Led Y position relative to the switch center
+    led_rotation: 0 # Led rotation
+    vertical_underglow_shift: -kp + 7.8  # How much to shift underglow leds tied to keys
+    vertical_diode_shift: 1.5 # How much to shift to avoid overlap
+    horizontal_diode_shift: -0.5 kcow - 0.85
+    diode_rotation: -180 # Diode rotation
+    switch_rotation: 180 # Hotswap south, led north
   
 units:
+  $extends: meta.switch
   kx: cx
   ky: cy
   px: kx + 2
   py: ky + 2
-  led_pos_x: 0 # Led X position relative to the switch center
-  led_pos_y: 4.7 # Led Y position relative to the switch center
-  led_rotation: 0 # Led rotation
 
   
   # Physical measures
@@ -39,35 +61,91 @@ points:
           - matrix_key
       anchor:
         rotate: 8
+        shift: [125, -125] # Fix KiCad placement
       columns:
-        pinky.key:
-          column_net: DAT
-          mirror.column_net: P10
-        ring.key:
-          splay: -10
+        pinky:
+          key:
+            column_net: DAT
+            mirror.column_net: P10
+          rows:
+            bottom.key:
+              led_prev: LED_3
+              led_next: LED_4
+            home.key:
+              led_prev: LED_2
+              led_next: LED_3
+            top.key:
+              led_prev: LED_1
+              led_next: LED_2
+        ring:
+          key:
+            splay: -10
           # hinge at the bottom right corner
           # of the bottom pinky's 14x14 hole
           # for historical reasons...
-          origin: [-12, -19]
-          stagger: 18
-          column_net: SDA
-          mirror.column_net: C0
-        middle.key:
-          splay: -5
-          origin: [-12, -19]
-          stagger: 14
-          column_net: SLC
-          mirror.column_net: C1
-        index.key:
-          splay: -5
-          origin: [-12, -19]
-          stagger: -10
-          column_net: CS
-          mirror.column_net: C2
-        inner.key:
-          stagger: -2
-          column_net: R0
-          mirror.column_net: C3
+            origin: [-12, -19]
+            stagger: 18
+            column_net: SDA
+            mirror.column_net: C0
+          rows:
+            bottom.key:
+              led_prev: LED_4
+              led_next: LED_5
+            home.key:
+              led_prev: LED_5
+              led_next: LED_6
+            top.key:
+              led_prev: LED_6
+              led_next: LED_7
+        middle:
+          key:
+            splay: -5
+            origin: [-12, -19]
+            stagger: 14
+            column_net: SLC
+            mirror.column_net: C1
+          rows:
+            bottom.key:
+              led_prev: LED_9
+              led_next: LED_10
+            home.key:
+              led_prev: LED_8
+              led_next: LED_9
+            top.key:
+              led_prev: LED_7
+              led_next: LED_8
+        index:
+          key:
+            splay: -5
+            origin: [-12, -19]
+            stagger: -10
+            column_net: CS
+            mirror.column_net: C2
+          rows:
+            bottom.key:
+              led_prev: LED_12
+              led_next: LED_13
+            home.key:
+              led_prev: LED_12
+              led_next: LED_11
+            top.key:
+              led_prev: LED_11
+              led_next: LED_10
+        inner:
+          key:
+            stagger: -2
+            column_net: R0
+            mirror.column_net: C3
+          rows:
+            bottom.key:
+              led_prev: LED_13
+              led_next: LED_14
+            home.key:
+              led_prev: LED_14
+              led_next: LED_15
+            top.key:
+              led_prev: LED_16
+              led_next: LED_17
       rows:
         bottom:
           row_net: R1
@@ -85,21 +163,36 @@ points:
         ref: matrix_inner_bottom
         shift: [-4, -19]
       columns:
-        near.key:
-          column_net: SDA
-          mirror.column_net: C4
-        home.key:
-          spread: 19
-          splay: -18
-          origin: [-11, -9]
-          column_net: SLC
-          mirror.column_net: C5
-        far.key:
-          spread: 19
-          splay: -18
-          origin: [-10.5, -9]
-          column_net: CS
-          mirror.column_net: P16
+        near:
+          key:
+            column_net: SDA
+            mirror.column_net: C4
+          rows:
+            bottom.key:
+              led_prev: LED_19
+              led_next: LED_20
+        home:
+          key:
+            spread: 19
+            splay: -18
+            origin: [-11, -9]
+            column_net: SLC
+            mirror.column_net: C5
+          rows:
+            bottom.key:
+              led_prev: LED_19
+              led_next: LED_20
+        far:
+          key:
+            spread: 19
+            splay: -18
+            origin: [-10.5, -9]
+            column_net: CS
+            mirror.column_net: P16
+          rows:
+            bottom.key:
+              led_prev: LED_22
+              led_next: LED_23
       rows:
         thumb:
           row_net: P9
@@ -113,12 +206,17 @@ points:
         ref: matrix_inner_bottom
         shift: [20, 1]
       columns:
-        home.key:
-          spread: 
-          splay: -18
-          origin: [-16, -13]
-          column_net: R0
-          mirror.column_net: P10
+        home:
+          key:
+            spread: 
+            splay: -18
+            origin: [-16, -13]
+            column_net: R0
+            mirror.column_net: P10
+          rows:
+            home.key:
+              led_prev: LED_24
+              led_next: ULED_6
       rows:
         thumb:
           row_net: P9
@@ -225,12 +323,22 @@ pcbs:
           
       diode:
         what: diode
-        where: /key/
+        where: [matrix_pinky_top, matrix_pinky_home, matrix_pinky_bottom, matrix_ring_top, matrix_ring_home, matrix_ring_bottom, matrix_middle_top, matrix_middle_home, matrix_middle_bottom, matrix_index_top, matrix_index_home, matrix_index_bottom, matrix_inner_top, matrix_inner_home, matrix_inner_bottom] 
         params:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
           rotate: 90
+          shift: [9,-1]
+
+      diode_mirror:
+        what: diode
+        where: [mirror_matrix_pinky_top, mirror_matrix_pinky_home, mirror_matrix_pinky_bottom, mirror_matrix_ring_top, mirror_matrix_ring_home, mirror_matrix_ring_bottom, mirror_matrix_middle_top, mirror_matrix_middle_home, mirror_matrix_middle_bottom, mirror_matrix_index_top, mirror_matrix_index_home, mirror_matrix_index_bottom, mirror_matrix_inner_top, mirror_matrix_inner_home, mirror_matrix_inner_bottom] 
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          rotate: -90
           shift: [9,-1]
 
       mcu:

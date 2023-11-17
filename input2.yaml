@@ -158,7 +158,7 @@ points:
       key:
         tags: 
           - key
-          - matrix_key
+          - thumb_key
       anchor:
         ref: matrix_inner_bottom
         shift: [-4, -19]
@@ -168,7 +168,7 @@ points:
             column_net: SDA
             mirror.column_net: C4
           rows:
-            bottom.key:
+            thumb.key:
               led_prev: LED_19
               led_next: LED_20
         home:
@@ -179,7 +179,7 @@ points:
             column_net: SLC
             mirror.column_net: C5
           rows:
-            bottom.key:
+            thumb.key:
               led_prev: LED_19
               led_next: LED_20
         far:
@@ -190,7 +190,7 @@ points:
             column_net: CS
             mirror.column_net: P16
           rows:
-            bottom.key:
+            thumb.key:
               led_prev: LED_22
               led_next: LED_23
       rows:
@@ -201,7 +201,7 @@ points:
       key:
         tags: 
           - key
-          - matrix_key
+          - thumb2_key
       anchor:
         ref: matrix_inner_bottom
         shift: [20, 1]
@@ -214,7 +214,7 @@ points:
             column_net: R0
             mirror.column_net: P10
           rows:
-            home.key:
+            thumb.key:
               led_prev: LED_24
               led_next: ULED_6
       rows:
@@ -323,7 +323,7 @@ pcbs:
           
       diode:
         what: diode
-        where: [matrix_pinky_top, matrix_pinky_home, matrix_pinky_bottom, matrix_ring_top, matrix_ring_home, matrix_ring_bottom, matrix_middle_top, matrix_middle_home, matrix_middle_bottom, matrix_index_top, matrix_index_home, matrix_index_bottom, matrix_inner_top, matrix_inner_home, matrix_inner_bottom] 
+        where: [matrix_pinky_top, matrix_pinky_home, matrix_pinky_bottom, matrix_ring_top, matrix_ring_home, matrix_ring_bottom, matrix_middle_top, matrix_middle_home, matrix_middle_bottom, matrix_index_top, matrix_index_home, matrix_index_bottom, matrix_inner_top, matrix_inner_home, matrix_inner_bottom, thumbfan_near_thumb, thumbfan_home_thumb, thumbfan_far_thumb, thumbfan2_home_thumb] 
         params:
           from: "{{colrow}}"
           to: "{{row_net}}"
@@ -333,7 +333,7 @@ pcbs:
 
       diode_mirror:
         what: diode
-        where: [mirror_matrix_pinky_top, mirror_matrix_pinky_home, mirror_matrix_pinky_bottom, mirror_matrix_ring_top, mirror_matrix_ring_home, mirror_matrix_ring_bottom, mirror_matrix_middle_top, mirror_matrix_middle_home, mirror_matrix_middle_bottom, mirror_matrix_index_top, mirror_matrix_index_home, mirror_matrix_index_bottom, mirror_matrix_inner_top, mirror_matrix_inner_home, mirror_matrix_inner_bottom] 
+        where: [mirror_matrix_pinky_top, mirror_matrix_pinky_home, mirror_matrix_pinky_bottom, mirror_matrix_ring_top, mirror_matrix_ring_home, mirror_matrix_ring_bottom, mirror_matrix_middle_top, mirror_matrix_middle_home, mirror_matrix_middle_bottom, mirror_matrix_index_top, mirror_matrix_index_home, mirror_matrix_index_bottom, mirror_matrix_inner_top, mirror_matrix_inner_home, mirror_matrix_inner_bottom, mirror_thumbfan_near_thumb, mirror_thumbfan_home_thumb, mirror_thumbfan_far_thumb, mirror_thumbfan2_home_thumb] 
         params:
           from: "{{colrow}}"
           to: "{{row_net}}"

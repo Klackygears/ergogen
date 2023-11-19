@@ -8,6 +8,7 @@ module.exports = {
     jumper: require('./jumper'),
     mx: require('./mx'),
     oled: require('./oled'),
+    oled_128x64: require('./oled_128x64'),
     omron: require('./omron'),
     pad: require('./pad'),
     promicro: require('./promicro'),

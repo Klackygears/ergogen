@@ -348,6 +348,89 @@ outlines:
           shift: [-board_outline,board_outline]
       fillet: 2
 
+      
+#board edges defined here-----------------------------------
+fsilk_lines:
+  raw:
+    - what: rectangle
+      where: true
+      bound: true
+      size: [kx+5, ky+5]
+  keys:
+    - what: rectangle
+      where: true
+      bound: false
+      size: [kx-0.5,ky-0.5]
+  board:
+    - what: polygon
+      operation: stack
+      points:
+          #left side
+        - ref: matrix_pinky_top
+          shift: [-0,0]
+        - ref: matrix_pinky_bottom
+          shift: [-0,-0]
+        - ref: matrix_pinky_bottom
+          shift: [0 + 11,-0]
+
+          #bottom
+        - ref: thumbfan_home_thumb
+          shift: [-.55kx,-0]
+        - ref: thumbfan_home_thumb
+          shift: [.4kx,-0]
+        - ref: thumbfan_far_thumb
+          shift: [.7kx,-0]
+        - ref: mirror_thumbfan_far_thumb
+          shift: [.7kx,-0]
+        - ref: mirror_thumbfan_home_thumb
+          shift: [.4kx,-0]
+        - ref: mirror_thumbfan_home_thumb
+          shift: [-.55kx,-0]
+          
+          #right side
+        - ref: mirror_matrix_pinky_bottom
+          shift: [0 + 11,-0]
+        - ref: mirror_matrix_pinky_bottom
+          shift: [-0,-0]
+        - ref: mirror_matrix_pinky_top
+          shift: [-0,0]
+
+          #right top
+        - ref: mirror_matrix_ring_top
+          shift: [-0,0]
+        - ref: mirror_matrix_middle_top
+          shift: [-0,0]
+        - ref: mirror_matrix_middle_top
+          shift: [.2kx,0]
+        - ref: mirror_matrix_middle_top
+          shift: [.9kx,1.4ky]
+          
+          #mcu
+        - ref: matrix_index_top
+          shift: [kx,56]
+        - ref: matrix_index_top
+          shift: [-12,48]
+
+          #mouth
+        #- ref: matrix_index_top
+        #  shift: [-12,40]
+        #- ref: matrix_index_top
+        #  shift: [0,40]
+        #- ref: matrix_index_top
+        #  shift: [0,30]
+        #- ref: matrix_index_top
+        #  shift: [-12,30]
+
+          #left top
+        - ref: matrix_middle_top
+          shift: [.76kx,0]
+        - ref: matrix_middle_top
+          shift: [-0,0]
+        - ref: matrix_ring_top
+          shift: [-0,0]
+      fillet: 2
+
+
 #pcb definitions---------------------------------------------------------------------------
 pcbs:
   main:

@@ -8,17 +8,15 @@
 //    C: corresponds to pin 3 (for rotary)
 
 module.exports = {
-    nets: {
+    params: {
+        class: 'ROT',
+        // By placing a model in the path specified below KiCad will show it in the 3D viewer
         from: undefined,
         to: undefined,
         A: undefined,
         B: undefined,
         C: undefined
-    },
-    params: {
-        class: 'ROT',
-        // By placing a model in the path specified below KiCad will show it in the 3D viewer
-        model: './3d/ROT_EC11N.step'
+       // model: './3d/ROT_EC11N.step'
     },
     body: p => `
         (module rotary_encoder (layer F.Cu) (tedit 603326DE)
@@ -46,21 +44,17 @@ module.exports = {
             (fp_circle (center -0.12 -0.04) (end 2.88 -0.04) (layer F.Fab) (width 0.12))
 
             ${''/* pin names */}
-            (pad A thru_hole rect (at -7.62 -2.54 ${p.rot}) (size 2 2) (drill 1) (layers *.Cu *.Mask) ${p.net.A.str})
-            (pad C thru_hole circle (at -7.62 -0.04) (size 2 2) (drill 1) (layers *.Cu *.Mask) ${p.net.C.str})
-            (pad B thru_hole circle (at -7.62 2.46) (size 2 2) (drill 1) (layers *.Cu *.Mask) ${p.net.B.str})
-            (pad 1 thru_hole circle (at 6.88 -2.54) (size 1.5 1.5) (drill 1) (layers *.Cu *.Mask) ${p.net.from.str})
-            (pad 2 thru_hole circle (at 6.88 2.46) (size 1.5 1.5) (drill 1) (layers *.Cu *.Mask) ${p.net.to.str})
+            (pad A thru_hole rect (at -7.62 -2.54 ${p.rot}) (size 2 2) (drill 1) (layers *.Cu *.Mask) ${p.A.str})
+            (pad C thru_hole circle (at -7.62 -0.04) (size 2 2) (drill 1) (layers *.Cu *.Mask) ${p.C.str})
+            (pad B thru_hole circle (at -7.62 2.46) (size 2 2) (drill 1) (layers *.Cu *.Mask) ${p.B.str})
+            (pad 1 thru_hole circle (at 6.88 -2.54) (size 1.5 1.5) (drill 1) (layers *.Cu *.Mask) ${p.from.str})
+            (pad 2 thru_hole circle (at 6.88 2.46) (size 1.5 1.5) (drill 1) (layers *.Cu *.Mask) ${p.to.str})
 
             ${''/* Legs */}
             (pad "" thru_hole rect (at -0.12 -5.64 ${p.rot}) (size 3.2 2) (drill oval 2.8 1.5) (layers *.Cu *.Mask))
             (pad "" thru_hole rect (at -0.12 5.56 ${p.rot}) (size 3.2 2) (drill oval 2.8 1.5) (layers *.Cu *.Mask))
         
-            (model ${p.param.model}
-                (at (xyz -0.3 0.1 0))
-                (scale (xyz 1 1 1))
-                (rotate (xyz 0 0 0))
-            )
+
         )
     `
 }

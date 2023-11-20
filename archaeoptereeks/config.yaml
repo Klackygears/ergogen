@@ -444,11 +444,11 @@ pcbs:
       encoder:
         what: custom_fp/rotary_nosilk
         params:
-          from: C0 #"{{colrow}}"
-          to: C1 #"{{row_net}}"
-          A: C2
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+          A: C0
           B: GND
-          C: P9
+          C: C1
         where:
           ref.aggregate.parts: [matrix_inner_bottom, mirror_matrix_inner_bottom]
           shift: [0,5]

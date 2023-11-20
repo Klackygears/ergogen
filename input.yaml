@@ -5,18 +5,41 @@ meta:
   ref: &kb_ref "Archaeoptereeks"
   author: klackygears
 #  url: &kb_url null
+  footprint: &switch_footprint "choc"
+  switch:
+    $extends: presets.choc
 
+presets:
+  # These presets provide different layout options
+  # Select a preset in the `units` section below
+  # Note: The appropriate switch footprint will still need to be set in the `pcb` section
   
-  
+  choc:
+    # Key and keycap measures
+    kx: cx # spacing between key centers (X-axis)
+    ky: cy # spacing between key centers (Y-axis)
+    ks: 18.5 # horizontal space between columns (default: 19)
+    kp: 17.5 # vertical padding between keys (deafult: 19)
+    kcow: 13.8 # key cutout hole width (cherry, choc v2: 14, choc v1: 13.8)
+    kcoh: 13.8 # key cutout hole height (cherry, choc v2: 14, choc v1: 13.8)
+    keycw: 17.5 # keycap width (cherry: 18, choc: 17.5)
+    keych: 16.5 # keycap height (cherry: 18, choc: 16.5)
+    led_pos_x: 0 # Led X position relative to the switch center
+    led_pos_y: 4.7 # Led Y position relative to the switch center
+    led_rotation: 0 # Led rotation
+    vertical_underglow_shift: -kp + 7.8  # How much to shift underglow leds tied to keys
+    vertical_diode_shift: 1.5 # How much to shift to avoid overlap
+    horizontal_diode_shift: -0.5 kcow - 0.85
+    diode_rotation: -180 # Diode rotation
+    switch_rotation: 180 # Hotswap south, led north
+
 units:
+  $extends: meta.switch
   kx: cx
   ky: cy
   px: kx + 2
   py: ky + 2
-  led_pos_x: 0 # Led X position relative to the switch center
-  led_pos_y: 4.7 # Led Y position relative to the switch center
-  led_rotation: 0 # Led rotation
-
+  board_outline: 10
   
   # Physical measures
   screw_radius: 1.1 # M2 screws
@@ -32,6 +55,7 @@ units:
 
 points:
   zones:
+    #alphas--------------------------------------------------------
     matrix:
       key:
         tags: 
@@ -39,35 +63,117 @@ points:
           - matrix_key
       anchor:
         rotate: 8
+        shift: [125, -125] # Fix KiCad placement
       columns:
-        pinky.key:
-          column_net: DAT
-          mirror.column_net: P10
-        ring.key:
-          splay: -10
-          # hinge at the bottom right corner
-          # of the bottom pinky's 14x14 hole
-          # for historical reasons...
-          origin: [-12, -19]
-          stagger: 18
-          column_net: SDA
-          mirror.column_net: C0
-        middle.key:
-          splay: -5
-          origin: [-12, -19]
-          stagger: 14
-          column_net: SLC
-          mirror.column_net: C1
-        index.key:
-          splay: -5
-          origin: [-12, -19]
-          stagger: -10
-          column_net: CS
-          mirror.column_net: C2
-        inner.key:
-          stagger: -2
-          column_net: R0
-          mirror.column_net: C3
+        pinky:
+          key:
+            column_net: DAT
+            mirror.column_net: P10
+          rows:
+            bottom.key:
+              led_prev: LED_3
+              led_next: LED_4
+              mirror_led_prev: LED_36
+              mirror_led_next: LED_37
+            home.key:
+              led_prev: LED_2
+              led_next: LED_3
+              mirror_led_prev: LED_37
+              mirror_led_next: LED_38
+            top.key:
+              led_prev: LED
+              led_next: LED_2
+              mirror_led_prev: LED_38
+        ring:
+          key:
+            splay: -10
+            origin: [-12, -19]
+            stagger: 18
+            column_net: SDA
+            mirror.column_net: C0
+          rows:
+            bottom.key:
+              led_prev: LED_4
+              led_next: LED_5
+              mirror_led_prev: LED_35
+              mirror_led_next: LED_36
+            home.key:
+              led_prev: LED_5
+              led_next: LED_6
+              mirror_led_prev: LED_34
+              mirror_led_next: LED_35
+            top.key:
+              led_prev: LED_6
+              led_next: LED_7
+              mirror_led_prev: LED_33
+              mirror_led_next: LED_34
+        middle:
+          key:
+            splay: -5
+            origin: [-12, -19]
+            stagger: 14
+            column_net: SLC
+            mirror.column_net: C1
+          rows:
+            bottom.key:
+              led_prev: LED_9
+              led_next: LED_10
+              mirror_led_prev: LED_30
+              mirror_led_next: LED_31
+            home.key:
+              led_prev: LED_8
+              led_next: LED_9
+              mirror_led_prev: LED_31
+              mirror_led_next: LED_32
+            top.key:
+              led_prev: LED_7
+              led_next: LED_8
+              mirror_led_prev: LED_32
+              mirror_led_next: LED_33
+        index:
+          key:
+            splay: -5
+            origin: [-12, -19]
+            stagger: -10
+            column_net: CS
+            mirror.column_net: C2
+          rows:
+            bottom.key:
+              led_prev: LED_10
+              led_next: LED_11
+              mirror_led_prev: LED_29
+              mirror_led_next: LED_30
+            home.key:
+              led_prev: LED_11
+              led_next: LED_12
+              mirror_led_prev: LED_28
+              mirror_led_next: LED_29
+            top.key:
+              led_prev: LED_12
+              led_next: LED_13
+              mirror_led_prev: LED_27
+              mirror_led_next: LED_28
+        inner:
+          key:
+            stagger: -2
+            column_net: R0
+            mirror.column_net: C3
+          rows:
+            bottom.key:
+              led_prev: LED_15
+              led_next: LED_16
+              mirror_led_prev: LED_24
+              mirror_led_next: LED_25
+            home.key:
+              led_prev: LED_14
+              led_next: LED_15
+              mirror_led_prev: LED_25
+              mirror_led_next: LED_26
+            top.key:
+              led_prev: LED_13
+              led_next: LED_14
+              mirror_led_prev: LED_26
+              mirror_led_next: LED_27
       rows:
         bottom:
           row_net: R1
@@ -76,49 +182,79 @@ points:
         top:
           row_net: R3
 
+    #primary thumbs row--------------------------------------------------------
     thumbfan:
       key:
         tags: 
           - key
-          - matrix_key
+          - thumb_key
       anchor:
         ref: matrix_inner_bottom
         shift: [-4, -19]
       columns:
-        near.key:
-          column_net: SDA
-          mirror.column_net: C4
-        home.key:
-          spread: 19
-          splay: -18
-          origin: [-11, -9]
-          column_net: SLC
-          mirror.column_net: C5
-        far.key:
-          spread: 19
-          splay: -18
-          origin: [-10.5, -9]
-          column_net: CS
-          mirror.column_net: P16
+        near:
+          key:
+            column_net: SDA
+            mirror.column_net: C4
+          rows:
+            thumb.key:
+              led_prev: LED_16
+              led_next: LED_17
+              mirror_led_prev: LED_23
+              mirror_led_next: LED_24
+        home:
+          key:
+            spread: 19
+            splay: -18
+            origin: [-11, -9]
+            column_net: SLC
+            mirror.column_net: C5
+          rows:
+            thumb.key:
+              led_prev: LED_17
+              led_next: LED_18
+              mirror_led_prev: LED_22
+              mirror_led_next: LED_23
+        far:
+          key:
+            spread: 19
+            splay: -18
+            origin: [-10.5, -9]
+            column_net: CS
+            mirror.column_net: P16
+          rows:
+            thumb.key:
+              led_prev: LED_19
+              led_next: LED_20
+              mirror_led_prev: LED_20
+              mirror_led_next: LED_21
       rows:
         thumb:
           row_net: P9
 
+    #extra thumb key--------------------------------------------------------
     thumbfan2:
       key:
         tags: 
           - key
-          - matrix_key
+          - thumb2_key
       anchor:
         ref: matrix_inner_bottom
         shift: [20, 1]
       columns:
-        home.key:
-          spread: 
-          splay: -18
-          origin: [-16, -13]
-          column_net: R0
-          mirror.column_net: P10
+        home:
+          key:
+            spread: 
+            splay: -18
+            origin: [-16, -13]
+            column_net: R0
+            mirror.column_net: P10
+          rows:
+            thumb.key:
+              led_prev: LED_18
+              led_next: LED_19
+              mirror_led_prev: LED_21
+              mirror_led_next: LED_22
       rows:
         thumb:
           row_net: P9
@@ -127,6 +263,8 @@ points:
     ref: matrix_pinky_home
     distance: 216
 
+
+#board edges defined here-----------------------------------
 outlines:
   raw:
     - what: rectangle
@@ -144,41 +282,41 @@ outlines:
       points:
           #left side
         - ref: matrix_pinky_top
-          shift: [-.8kx,.8ky]
+          shift: [-board_outline,board_outline]
         - ref: matrix_pinky_bottom
-          shift: [-.8kx,-.8ky]
+          shift: [-board_outline,-board_outline]
         - ref: matrix_pinky_bottom
-          shift: [.8kx,-.8ky]
+          shift: [board_outline + 11,-board_outline]
 
           #bottom
         - ref: thumbfan_home_thumb
-          shift: [-.4kx,-.8ky]
+          shift: [-.55kx,-board_outline]
         - ref: thumbfan_home_thumb
-          shift: [.4kx,-.8ky]
+          shift: [.4kx,-board_outline]
         - ref: thumbfan_far_thumb
-          shift: [.7kx,-.8ky]
+          shift: [.7kx,-board_outline]
         - ref: mirror_thumbfan_far_thumb
-          shift: [.7kx,-.8ky]
+          shift: [.7kx,-board_outline]
         - ref: mirror_thumbfan_home_thumb
-          shift: [.4kx,-.8ky]
+          shift: [.4kx,-board_outline]
         - ref: mirror_thumbfan_home_thumb
-          shift: [-.4kx,-.8ky]
+          shift: [-.55kx,-board_outline]
           
           #right side
         - ref: mirror_matrix_pinky_bottom
-          shift: [.8kx,-.8ky]
+          shift: [board_outline + 11,-board_outline]
         - ref: mirror_matrix_pinky_bottom
-          shift: [-.8kx,-.8ky]
+          shift: [-board_outline,-board_outline]
         - ref: mirror_matrix_pinky_top
-          shift: [-.8kx,.8ky]
+          shift: [-board_outline,board_outline]
 
           #right top
         - ref: mirror_matrix_ring_top
-          shift: [-.8kx,.8ky]
+          shift: [-board_outline,board_outline]
         - ref: mirror_matrix_middle_top
-          shift: [-.8kx,.8ky]
+          shift: [-board_outline,board_outline]
         - ref: mirror_matrix_middle_top
-          shift: [.2kx,.8ky]
+          shift: [.2kx,board_outline]
         - ref: mirror_matrix_middle_top
           shift: [.9kx,1.4ky]
           
@@ -187,6 +325,8 @@ outlines:
           shift: [kx,56]
         - ref: matrix_index_top
           shift: [-12,48]
+
+          #mouth
         #- ref: matrix_index_top
         #  shift: [-12,40]
         #- ref: matrix_index_top
@@ -198,15 +338,99 @@ outlines:
 
           #left top
         - ref: matrix_middle_top
-          shift: [.78kx,.8ky]
+          shift: [.76kx,board_outline]
         - ref: matrix_middle_top
-          shift: [-.8kx,.8ky]
+          shift: [-board_outline,board_outline]
         - ref: matrix_ring_top
-          shift: [-.8kx,.8ky]
-
+          shift: [-board_outline,board_outline]
       fillet: 2
+
+      
+#board edges defined here-----------------------------------
+fsilk_lines:
+  raw:
+    - what: line
+      where: true
+      bound: true
+      size: [kx+5, ky+5]
+  keys:
+    - what: rectangle
+      where: true
+      bound: false
+      size: [kx-0.5,ky-0.5]
+  board:
+    - what: polygon
+      operation: stack
+      points:
+          #left side
+        - ref: matrix_pinky_top
+          shift: [-0,0]
+        - ref: matrix_pinky_bottom
+          shift: [-0,-0]
+        - ref: matrix_pinky_bottom
+          shift: [0 + 11,-0]
+
+          #bottom
+        - ref: thumbfan_home_thumb
+          shift: [-.55kx,-0]
+        - ref: thumbfan_home_thumb
+          shift: [.4kx,-0]
+        - ref: thumbfan_far_thumb
+          shift: [.7kx,-0]
+        - ref: mirror_thumbfan_far_thumb
+          shift: [.7kx,-0]
+        - ref: mirror_thumbfan_home_thumb
+          shift: [.4kx,-0]
+        - ref: mirror_thumbfan_home_thumb
+          shift: [-.55kx,-0]
+          
+          #right side
+        - ref: mirror_matrix_pinky_bottom
+          shift: [0 + 11,-0]
+        - ref: mirror_matrix_pinky_bottom
+          shift: [-0,-0]
+        - ref: mirror_matrix_pinky_top
+          shift: [-0,0]
+
+          #right top
+        - ref: mirror_matrix_ring_top
+          shift: [-0,0]
+        - ref: mirror_matrix_middle_top
+          shift: [-0,0]
+        - ref: mirror_matrix_middle_top
+          shift: [.2kx,0]
+        - ref: mirror_matrix_middle_top
+          shift: [.9kx,1.4ky]
+          
+          #mcu
+        - ref: matrix_index_top
+          shift: [kx,56]
+        - ref: matrix_index_top
+          shift: [-12,48]
+
+          #mouth
+        #- ref: matrix_index_top
+        #  shift: [-12,40]
+        #- ref: matrix_index_top
+        #  shift: [0,40]
+        #- ref: matrix_index_top
+        #  shift: [0,30]
+        #- ref: matrix_index_top
+        #  shift: [-12,30]
+
+          #left top
+        - ref: matrix_middle_top
+          shift: [.76kx,0]
+        - ref: matrix_middle_top
+          shift: [-0,0]
+        - ref: matrix_ring_top
+          shift: [-0,0]
+      fillet: 2
+
+
+#pcb definitions---------------------------------------------------------------------------
 pcbs:
-  base:
+  main:
     outlines:
       main:
         outline: board
@@ -215,7 +439,7 @@ pcbs:
         what: choc
         where: true
         params:
-          keycaps: false
+          keycaps: true
           reverse: [false,true]
           hotswap: false
           from: "{{column_net}}"
@@ -225,12 +449,29 @@ pcbs:
           
       diode:
         what: diode
-        where: /key/
+        where: [matrix_pinky_top, matrix_pinky_home, matrix_pinky_bottom, matrix_ring_top, matrix_ring_home, 
+                matrix_ring_bottom, matrix_middle_top, matrix_middle_home, matrix_middle_bottom, matrix_index_top, 
+                matrix_index_home, matrix_index_bottom, matrix_inner_top, matrix_inner_home, matrix_inner_bottom, 
+                thumbfan_near_thumb, thumbfan_home_thumb, thumbfan_far_thumb, thumbfan2_home_thumb]
         params:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
           rotate: 90
+          shift: [9,-1]
+
+      diode_mirror:
+        what: diode
+        where: [mirror_matrix_pinky_top, mirror_matrix_pinky_home, mirror_matrix_pinky_bottom, mirror_matrix_ring_top, 
+                mirror_matrix_ring_home, mirror_matrix_ring_bottom, mirror_matrix_middle_top, mirror_matrix_middle_home, 
+                mirror_matrix_middle_bottom, mirror_matrix_index_top, mirror_matrix_index_home, mirror_matrix_index_bottom, 
+                mirror_matrix_inner_top, mirror_matrix_inner_home, mirror_matrix_inner_bottom, mirror_thumbfan_near_thumb, 
+                mirror_thumbfan_home_thumb, mirror_thumbfan_far_thumb, mirror_thumbfan2_home_thumb] 
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          rotate: -90
           shift: [9,-1]
 
       mcu:
@@ -252,14 +493,13 @@ pcbs:
           P6: R1
           P7: R2
           P8: R3
-          traces: true
+          traces: false
           show_instructions: false
           show_silk_labels: true
           show_via_labels: false
         adjust:
           shift: [-14.5,38]
           rotate: 90
-
 
       reset:
         what: button
@@ -283,9 +523,38 @@ pcbs:
           shift: [20,51]
           rotate: 0
 
+      encoder:
+        what: rotary
+        params:
+          from: C0
+          to: C1
+          A: "{{colrow}}" #C2
+          B: GND
+          C: "{{row_net}}" #P9
+        where:
+          ref.aggregate.parts: [matrix_inner_bottom, mirror_matrix_inner_bottom]
+          shift: [0,5]
+          rotate: 90
+
+      diode_encoder:
+        what: diode
+        where: 
+          ref.aggregate.parts: [matrix_inner_bottom, mirror_matrix_inner_bottom]
+          shift: [-1,-19]
+          rotate: 90
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          rotate: 90
+          shift: [9,-1]
+
       per_key_leds:
         what: sk6812minie
-        where: /key/
+        where: [matrix_pinky_top, matrix_pinky_home, matrix_pinky_bottom, matrix_ring_top, matrix_ring_home, 
+                matrix_ring_bottom, matrix_middle_top, matrix_middle_home, matrix_middle_bottom, matrix_index_top, 
+                matrix_index_home, matrix_index_bottom, matrix_inner_top, matrix_inner_home, matrix_inner_bottom, 
+                thumbfan_near_thumb, thumbfan_home_thumb, thumbfan_far_thumb, thumbfan2_home_thumb]
         params:
           P1: VCC
           P2: "{{key.led_next}}" #DOUT
@@ -294,7 +563,33 @@ pcbs:
           reversible: true
           reverse_mount: true
           add_traces_vias: true
-          add_keepout: false
+          add_keepout: true
+          add_courtyard: false
+          gnd_trace_width: gnd_trace_width
+          pwr_trace_width: pwr_trace_width
+          signal_trace_width: signal_trace_width
+          via_size: via_size
+          via_drill: via_drill
+        adjust:
+          shift: [led_pos_x, led_pos_y]
+          rotate: led_rotation
+          
+      per_key_leds_mirror:
+        what: sk6812minie
+        where: [mirror_matrix_pinky_top, mirror_matrix_pinky_home, mirror_matrix_pinky_bottom, mirror_matrix_ring_top, 
+                mirror_matrix_ring_home, mirror_matrix_ring_bottom, mirror_matrix_middle_top, mirror_matrix_middle_home, 
+                mirror_matrix_middle_bottom, mirror_matrix_index_top, mirror_matrix_index_home, mirror_matrix_index_bottom, 
+                mirror_matrix_inner_top, mirror_matrix_inner_home, mirror_matrix_inner_bottom, mirror_thumbfan_near_thumb, 
+                mirror_thumbfan_home_thumb, mirror_thumbfan_far_thumb, mirror_thumbfan2_home_thumb] 
+        params:
+          P1: VCC
+          P2: "{{key.mirror_led_next}}" #DOUT
+          P3: GND
+          P4: "{{key.mirror_led_prev}}" #DIN
+          reversible: true
+          reverse_mount: true
+          add_traces_vias: true
+          add_keepout: true
           add_courtyard: false
           gnd_trace_width: gnd_trace_width
           pwr_trace_width: pwr_trace_width

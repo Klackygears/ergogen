@@ -442,7 +442,7 @@ pcbs:
           rotate: 0
 
       encoder:
-        what: rotary
+        what: custom_fp/rotary_nosilk
         params:
           from: C0 #"{{colrow}}"
           to: C1 #"{{row_net}}"
@@ -468,7 +468,7 @@ pcbs:
           shift: [9,-1]
 
       per_key_leds:
-        what: sk6812minie
+        what: sk6812mini-e
         where: [matrix_pinky_top, matrix_pinky_home, matrix_pinky_bottom, matrix_ring_top, matrix_ring_home, 
                 matrix_ring_bottom, matrix_middle_top, matrix_middle_home, matrix_middle_bottom, matrix_index_top, 
                 matrix_index_home, matrix_index_bottom, matrix_inner_top, matrix_inner_home, matrix_inner_bottom, 
@@ -493,7 +493,7 @@ pcbs:
           rotate: led_rotation
           
       per_key_leds_mirror:
-        what: sk6812minie
+        what: sk6812mini-e
         where: [mirror_matrix_pinky_top, mirror_matrix_pinky_home, mirror_matrix_pinky_bottom, mirror_matrix_ring_top, 
                 mirror_matrix_ring_home, mirror_matrix_ring_bottom, mirror_matrix_middle_top, mirror_matrix_middle_home, 
                 mirror_matrix_middle_bottom, mirror_matrix_index_top, mirror_matrix_index_home, mirror_matrix_index_bottom, 

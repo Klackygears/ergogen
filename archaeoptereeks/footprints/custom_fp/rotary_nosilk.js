@@ -16,7 +16,6 @@ module.exports = {
         A: undefined,
         B: undefined,
         C: undefined
-       // model: './3d/ROT_EC11N.step'
     },
     body: p => `
         (module rotary_encoder (layer F.Cu) (tedit 603326DE)
@@ -54,7 +53,6 @@ module.exports = {
             (pad "" thru_hole rect (at -0.12 -5.64 ${p.rot}) (size 3.2 2) (drill oval 2.8 1.5) (layers *.Cu *.Mask))
             (pad "" thru_hole rect (at -0.12 5.56 ${p.rot}) (size 3.2 2) (drill oval 2.8 1.5) (layers *.Cu *.Mask))
         
-
         )
     `
 }

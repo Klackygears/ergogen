@@ -1,0 +1,1661 @@
+
+            
+(kicad_pcb (version 20171130) (host pcbnew 5.1.6)
+
+  (page A3)
+  (title_block
+    (title plate)
+    (rev 0.1)
+    (company klackygears)
+  )
+
+  (general
+    (thickness 1.6)
+  )
+
+  (layers
+    (0 F.Cu signal)
+    (31 B.Cu signal)
+    (32 B.Adhes user)
+    (33 F.Adhes user)
+    (34 B.Paste user)
+    (35 F.Paste user)
+    (36 B.SilkS user)
+    (37 F.SilkS user)
+    (38 B.Mask user)
+    (39 F.Mask user)
+    (40 Dwgs.User user)
+    (41 Cmts.User user)
+    (42 Eco1.User user)
+    (43 Eco2.User user)
+    (44 Edge.Cuts user)
+    (45 Margin user)
+    (46 B.CrtYd user)
+    (47 F.CrtYd user)
+    (48 B.Fab user)
+    (49 F.Fab user)
+  )
+
+  (setup
+    (last_trace_width 0.25)
+    (trace_clearance 0.2)
+    (zone_clearance 0.508)
+    (zone_45_only no)
+    (trace_min 0.2)
+    (via_size 0.8)
+    (via_drill 0.4)
+    (via_min_size 0.4)
+    (via_min_drill 0.3)
+    (uvia_size 0.3)
+    (uvia_drill 0.1)
+    (uvias_allowed no)
+    (uvia_min_size 0.2)
+    (uvia_min_drill 0.1)
+    (edge_width 0.05)
+    (segment_width 0.2)
+    (pcb_text_width 0.3)
+    (pcb_text_size 1.5 1.5)
+    (mod_edge_width 0.12)
+    (mod_text_size 1 1)
+    (mod_text_width 0.15)
+    (pad_size 1.524 1.524)
+    (pad_drill 0.762)
+    (pad_to_mask_clearance 0.05)
+    (aux_axis_origin 0 0)
+    (visible_elements FFFFFF7F)
+    (pcbplotparams
+      (layerselection 0x010fc_ffffffff)
+      (usegerberextensions false)
+      (usegerberattributes true)
+      (usegerberadvancedattributes true)
+      (creategerberjobfile true)
+      (excludeedgelayer true)
+      (linewidth 0.100000)
+      (plotframeref false)
+      (viasonmask false)
+      (mode 1)
+      (useauxorigin false)
+      (hpglpennumber 1)
+      (hpglpenspeed 20)
+      (hpglpendiameter 15.000000)
+      (psnegative false)
+      (psa4output false)
+      (plotreference true)
+      (plotvalue true)
+      (plotinvisibletext false)
+      (padsonsilk false)
+      (subtractmaskfromsilk false)
+      (outputformat 1)
+      (mirror false)
+      (drillshape 1)
+      (scaleselection 1)
+      (outputdirectory ""))
+  )
+
+            (net 0 "")
+(net 1 "GND")
+(net 2 "R1")
+(net 3 "pinky_bottom")
+(net 4 "pinky_home")
+(net 5 "pinky_top")
+(net 6 "R0")
+(net 7 "ring_bottom")
+(net 8 "ring_home")
+(net 9 "ring_top")
+(net 10 "CS")
+(net 11 "middle_bottom")
+(net 12 "middle_home")
+(net 13 "middle_top")
+(net 14 "R2")
+(net 15 "index_bottom")
+(net 16 "index_home")
+(net 17 "index_top")
+(net 18 "R3")
+(net 19 "inner_bottom")
+(net 20 "inner_home")
+(net 21 "inner_top")
+(net 22 "near_thumb")
+(net 23 "home_thumb")
+(net 24 "far_thumb")
+(net 25 "P10")
+(net 26 "mirror_pinky_bottom")
+(net 27 "mirror_pinky_home")
+(net 28 "mirror_pinky_top")
+(net 29 "P16")
+(net 30 "mirror_ring_bottom")
+(net 31 "mirror_ring_home")
+(net 32 "mirror_ring_top")
+(net 33 "C5")
+(net 34 "mirror_middle_bottom")
+(net 35 "mirror_middle_home")
+(net 36 "mirror_middle_top")
+(net 37 "C4")
+(net 38 "mirror_index_bottom")
+(net 39 "mirror_index_home")
+(net 40 "mirror_index_top")
+(net 41 "C3")
+(net 42 "mirror_inner_bottom")
+(net 43 "mirror_inner_home")
+(net 44 "mirror_inner_top")
+(net 45 "mirror_near_thumb")
+(net 46 "mirror_home_thumb")
+(net 47 "mirror_far_thumb")
+            
+  (net_class Default "This is the default net class."
+    (clearance 0.2)
+    (trace_width 0.25)
+    (via_dia 0.8)
+    (via_drill 0.4)
+    (uvia_dia 0.3)
+    (uvia_drill 0.1)
+    (add_net "")
+(add_net "GND")
+(add_net "R1")
+(add_net "pinky_bottom")
+(add_net "pinky_home")
+(add_net "pinky_top")
+(add_net "R0")
+(add_net "ring_bottom")
+(add_net "ring_home")
+(add_net "ring_top")
+(add_net "CS")
+(add_net "middle_bottom")
+(add_net "middle_home")
+(add_net "middle_top")
+(add_net "R2")
+(add_net "index_bottom")
+(add_net "index_home")
+(add_net "index_top")
+(add_net "R3")
+(add_net "inner_bottom")
+(add_net "inner_home")
+(add_net "inner_top")
+(add_net "near_thumb")
+(add_net "home_thumb")
+(add_net "far_thumb")
+(add_net "P10")
+(add_net "mirror_pinky_bottom")
+(add_net "mirror_pinky_home")
+(add_net "mirror_pinky_top")
+(add_net "P16")
+(add_net "mirror_ring_bottom")
+(add_net "mirror_ring_home")
+(add_net "mirror_ring_top")
+(add_net "C5")
+(add_net "mirror_middle_bottom")
+(add_net "mirror_middle_home")
+(add_net "mirror_middle_top")
+(add_net "C4")
+(add_net "mirror_index_bottom")
+(add_net "mirror_index_home")
+(add_net "mirror_index_top")
+(add_net "C3")
+(add_net "mirror_inner_bottom")
+(add_net "mirror_inner_home")
+(add_net "mirror_inner_top")
+(add_net "mirror_near_thumb")
+(add_net "mirror_home_thumb")
+(add_net "mirror_far_thumb")
+  )
+
+            
+    (module choc_switch_cutout (layer F.Cu)
+        (at 74.7090597 160.2140955 -12)
+        (attr virtual)
+        
+        (fp_text reference "CHOC1" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 168) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 168) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 78.6593818 141.6292911 -12)
+        (attr virtual)
+        
+        (fp_text reference "CHOC2" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 168) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 168) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 82.609704 123.0444867 -12)
+        (attr virtual)
+        
+        (fp_text reference "CHOC3" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 168) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 168) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 99.5919128 149.5264108 -22)
+        (attr virtual)
+        
+        (fp_text reference "CHOC4" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 158) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 158) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 106.709438 131.9099176 -22)
+        (attr virtual)
+        
+        (fp_text reference "CHOC5" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 158) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 158) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 113.8269633 114.2934244 -22)
+        (attr virtual)
+        
+        (fp_text reference "CHOC6" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 158) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 158) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 123.5270645 145.3033383 -27)
+        (attr virtual)
+        
+        (fp_text reference "CHOC7" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 153) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 153) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 132.152884 128.3742144 -27)
+        (attr virtual)
+        
+        (fp_text reference "CHOC8" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 153) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 153) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 140.7787035 111.4450904 -27)
+        (attr virtual)
+        
+        (fp_text reference "CHOC9" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 153) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 153) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 136.843429 164.5665782 -32)
+        (attr virtual)
+        
+        (fp_text reference "CHOC10" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 148) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 148) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 146.911895 148.4536644 -32)
+        (attr virtual)
+        
+        (fp_text reference "CHOC11" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 148) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 148) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 156.980361 132.3407506 -32)
+        (attr virtual)
+        
+        (fp_text reference "CHOC12" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 148) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 148) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 151.8965042 176.3311406 -32)
+        (attr virtual)
+        
+        (fp_text reference "CHOC13" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 148) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 148) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 161.9649702 160.2182268 -32)
+        (attr virtual)
+        
+        (fp_text reference "CHOC14" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 148) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 148) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 172.0334362 144.105313 -32)
+        (attr virtual)
+        
+        (fp_text reference "CHOC15" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 148) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 148) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 138.4358458 190.3243774 -32)
+        (attr virtual)
+        
+        (fp_text reference "CHOC16" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 148) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 148) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 154.4160209 204.8375648 -50)
+        (attr virtual)
+        
+        (fp_text reference "CHOC17" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 130) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 130) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 165.2633395 223.4980021 -68)
+        (attr virtual)
+        
+        (fp_text reference "CHOC18" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 112) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 112) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 298.6097039 160.2140955 12)
+        (attr virtual)
+        
+        (fp_text reference "CHOC19" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 192) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 192) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 294.6593818 141.6292911 12)
+        (attr virtual)
+        
+        (fp_text reference "CHOC20" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 192) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 192) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 290.70905960000005 123.0444867 12)
+        (attr virtual)
+        
+        (fp_text reference "CHOC21" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 192) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 192) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 273.7268508 149.5264108 22)
+        (attr virtual)
+        
+        (fp_text reference "CHOC22" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 202) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 202) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 266.60932560000003 131.9099176 22)
+        (attr virtual)
+        
+        (fp_text reference "CHOC23" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 202) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 202) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 259.4918003 114.2934244 22)
+        (attr virtual)
+        
+        (fp_text reference "CHOC24" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 202) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 202) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 249.79169910000002 145.3033383 27)
+        (attr virtual)
+        
+        (fp_text reference "CHOC25" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 207) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 207) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 241.1658796 128.3742144 27)
+        (attr virtual)
+        
+        (fp_text reference "CHOC26" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 207) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 207) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 232.5400601 111.4450904 27)
+        (attr virtual)
+        
+        (fp_text reference "CHOC27" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 207) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 207) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 236.47533460000002 164.5665782 32)
+        (attr virtual)
+        
+        (fp_text reference "CHOC28" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 212) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 212) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 226.40686860000002 148.4536644 32)
+        (attr virtual)
+        
+        (fp_text reference "CHOC29" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 212) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 212) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 216.33840260000002 132.3407506 32)
+        (attr virtual)
+        
+        (fp_text reference "CHOC30" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 212) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 212) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 221.4222594 176.3311406 32)
+        (attr virtual)
+        
+        (fp_text reference "CHOC31" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 212) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 212) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 211.3537934 160.2182268 32)
+        (attr virtual)
+        
+        (fp_text reference "CHOC32" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 212) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 212) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 201.2853274 144.105313 32)
+        (attr virtual)
+        
+        (fp_text reference "CHOC33" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 212) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 212) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 234.8829178 190.3243774 32)
+        (attr virtual)
+        
+        (fp_text reference "CHOC34" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 212) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 212) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 218.9027427 204.8375648 50)
+        (attr virtual)
+        
+        (fp_text reference "CHOC35" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 230) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 230) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+    (module choc_switch_cutout (layer F.Cu)
+        (at 208.0554241 223.4980021 68)
+        (attr virtual)
+        
+        (fp_text reference "CHOC36" (at 0.25 10.05) (layer "Eco2.User")  hide
+            (effects (font (size 1 1) (thickness 0.15)))
+        )
+
+        
+        (pad "1" smd roundrect (at 0 0 248) (size 15.5 15.5) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.063))
+        (pad "1" smd roundrect (at 0 0 248) (size 15.5 15.5) (layers "B.Cu" "B.Mask") (roundrect_rratio 0.063))
+  
+        
+        (fp_line (start -6.95 -6.95) (end 6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start -6.95 6.95) (end -6.95 -6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 -6.95) (end 6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+        (fp_line (start 6.95 6.95) (end -6.95 6.95)
+          (stroke (width 0.12) (type solid)) (layer "Edge.Cuts"))
+
+        
+        (fp_line (start -8.75 -8.75) (end 8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start -8.75 8.75) (end -8.75 -8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 -8.75) (end 8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+        (fp_line (start 8.75 8.75) (end -8.75 8.75)
+          (stroke (width 0.15) (type solid)) (layer "Dwgs.User"))
+
+  )
+  
+        
+
+            (module mounting_hole (layer F.Cu) (tedit 64B5A986)
+                (at 98.65220989999999 110.09697709999999 -12)
+                (fp_text reference "H1" (at 0 3) (layer F.SilkS) hide
+                    (effects (font (size 1 1) (thickness 0.15)))
+                )
+        
+                (pad "" thru_hole circle (at 0 0 180) (size 3.8000000000000003 3.8000000000000003) (drill 2.2) (layers *.Cu *.Mask))
+        
+                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer F.CrtYd) (width 0.05))
+                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer B.CrtYd) (width 0.05))
+        
+            )
+        
+
+            (module mounting_hole (layer F.Cu) (tedit 64B5A986)
+                (at 274.66655370000007 110.09697709999999 12)
+                (fp_text reference "H2" (at 0 3) (layer F.SilkS) hide
+                    (effects (font (size 1 1) (thickness 0.15)))
+                )
+        
+                (pad "" thru_hole circle (at 0 0 180) (size 3.8000000000000003 3.8000000000000003) (drill 2.2) (layers *.Cu *.Mask))
+        
+                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer F.CrtYd) (width 0.05))
+                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer B.CrtYd) (width 0.05))
+        
+            )
+        
+
+            (module mounting_hole (layer F.Cu) (tedit 64B5A986)
+                (at 160.37078069999998 115.5924655 -32)
+                (fp_text reference "H3" (at 0 3) (layer F.SilkS) hide
+                    (effects (font (size 1 1) (thickness 0.15)))
+                )
+        
+                (pad "" thru_hole circle (at 0 0 180) (size 3.8000000000000003 3.8000000000000003) (drill 2.2) (layers *.Cu *.Mask))
+        
+                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer F.CrtYd) (width 0.05))
+                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer B.CrtYd) (width 0.05))
+        
+            )
+        
+
+            (module mounting_hole (layer F.Cu) (tedit 64B5A986)
+                (at 212.94798290000003 115.5924655 32)
+                (fp_text reference "H4" (at 0 3) (layer F.SilkS) hide
+                    (effects (font (size 1 1) (thickness 0.15)))
+                )
+        
+                (pad "" thru_hole circle (at 0 0 180) (size 3.8000000000000003 3.8000000000000003) (drill 2.2) (layers *.Cu *.Mask))
+        
+                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer F.CrtYd) (width 0.05))
+                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer B.CrtYd) (width 0.05))
+        
+            )
+        
+
+            (module mounting_hole (layer F.Cu) (tedit 64B5A986)
+                (at 89.3198629 168.43142060000002 -12)
+                (fp_text reference "H5" (at 0 3) (layer F.SilkS) hide
+                    (effects (font (size 1 1) (thickness 0.15)))
+                )
+        
+                (pad "" thru_hole circle (at 0 0 180) (size 3.8000000000000003 3.8000000000000003) (drill 2.2) (layers *.Cu *.Mask))
+        
+                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer F.CrtYd) (width 0.05))
+                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer B.CrtYd) (width 0.05))
+        
+            )
+        
+
+            (module mounting_hole (layer F.Cu) (tedit 64B5A986)
+                (at 283.9989007 168.43142060000002 12)
+                (fp_text reference "H6" (at 0 3) (layer F.SilkS) hide
+                    (effects (font (size 1 1) (thickness 0.15)))
+                )
+        
+                (pad "" thru_hole circle (at 0 0 180) (size 3.8000000000000003 3.8000000000000003) (drill 2.2) (layers *.Cu *.Mask))
+        
+                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer F.CrtYd) (width 0.05))
+                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer B.CrtYd) (width 0.05))
+        
+            )
+        
+
+            (module mounting_hole (layer F.Cu) (tedit 64B5A986)
+                (at 177.3727254 234.7835138 -68)
+                (fp_text reference "H7" (at 0 3) (layer F.SilkS) hide
+                    (effects (font (size 1 1) (thickness 0.15)))
+                )
+        
+                (pad "" thru_hole circle (at 0 0 180) (size 3.8000000000000003 3.8000000000000003) (drill 2.2) (layers *.Cu *.Mask))
+        
+                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer F.CrtYd) (width 0.05))
+                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer B.CrtYd) (width 0.05))
+        
+            )
+        
+
+            (module mounting_hole (layer F.Cu) (tedit 64B5A986)
+                (at 195.9460382 234.7835138 68)
+                (fp_text reference "H8" (at 0 3) (layer F.SilkS) hide
+                    (effects (font (size 1 1) (thickness 0.15)))
+                )
+        
+                (pad "" thru_hole circle (at 0 0 180) (size 3.8000000000000003 3.8000000000000003) (drill 2.2) (layers *.Cu *.Mask))
+        
+                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer F.CrtYd) (width 0.05))
+                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer B.CrtYd) (width 0.05))
+        
+            )
+        
+
+      (gr_text "JLCJLCJLCJLC" (at 148.5539356 138.27753040000002 -32) (layer F.SilkS)
+        (effects (font (size 1 1) (thickness 0.15)))
+      )
+    
+            (gr_line (start 108.13564339243676 101.32463986753231) (end 76.0474698767882 110.84560438492619) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 74.66008510405862 112.34715967683474) (end 63.26429018744009 165.9601593779754) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 64.8047619874401 168.33227797797548) (end 92.8289720243144 174.28900769721372) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 93.46814286912831 174.54618922503906) (end 140.12038035149038 203.51296291163737) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 140.59747496535886 203.9265013345716) (end 151.1896948731793 216.54981739970782) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 151.50077481449688 217.0590366489482) (end 160.1961363066247 237.70294060000006) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 162.03930510662468 238.9265846) (end 211.2794584933753 238.9265846) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 213.12262729337533 237.70294060000003) (end 221.8179887855032 217.059036648948) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 222.12906872682083 216.5498173997077) (end 232.72128863464113 203.9265013345717) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 233.19838324850957 203.5129629116374) (end 279.8506207308716 174.5461892250391) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 280.4897915756855 174.28900769721372) (end 308.5140016125599 168.33227797797548) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 310.05447341255996 165.96015937797551) (end 298.6586784959414 112.34715967683451) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 297.2712937232119 110.8456043849262) (end 265.18312020756315 101.32463986753228) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 264.8460553816366 101.25550214792669) (end 237.5110605303247 98.06524406187184) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 236.3712339289809 98.26974747338598) (end 211.014989512417 111.18939932703631) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 209.97258660751694 112.52869054862333) (end 206.98330678901408 125.69777938317657) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 206.09276145603258 126.95115375982368) (end 190.32435541978728 136.80434735506032) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 189.26451684786875 137.1082512) (end 184.05424675213126 137.1082512) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 182.99440818021273 136.80434735506032) (end 167.22600214396743 126.95115375982367) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 166.3354568109859 125.69777938317634) (end 163.34617699248307 112.52869054862333) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 162.30377408758307 111.18939932703634) (end 136.9475296710191 98.26974747338596) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 135.8077030696753 98.06524406187184) (end 108.47270821836335 101.2555021479267) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 76.61638030405862 112.76298307683473) (end 76.04746990405863 110.84560437683473) (angle -61.47371289072777) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 65.2205853874401 166.37598277797542) (end 63.264290187440096 165.96015937797543) (angle -90.00000000000111) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 92.4131486243144 176.24530289721372) (end 93.4681428243144 174.54618929721372) (angle -19.83649984226659) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 139.06538610667647 205.212076583812) (end 140.59747500667646 203.926501283812) (angle -18.16349847150751) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 149.65760601449688 217.83539264894821) (end 151.50077481449688 217.05903664894822) (angle -17.1588241013291) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 162.03930510662468 236.9265846) (end 160.19613630662468 237.7029406) (angle -67.15882293845135) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 211.2794584933753 236.9265846) (end 211.2794584933753 238.9265846) (angle -67.15882293845277) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 223.6611575855032 217.83539264894807) (end 222.1290686855032 216.54981734894807) (angle -17.158824101328037) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 234.25337749332348 205.21207658381206) (end 233.19838329332347 203.51296298381206) (angle -18.163498471508078) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 280.9056149756855 176.24530289721372) (end 280.4897915756855 174.28900769721372) (angle -19.836499842266946) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 308.0981782125599 166.37598277797548) (end 308.5140016125599 168.33227797797548) (angle -89.99999999999802) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 296.70238329594144 112.76298307683464) (end 298.65867849594144 112.34715967683465) (angle -61.47371289072181) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 264.6142097802927 103.24201855944081) (end 265.1831201802927 101.32463985944081) (angle -9.869432819892452) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 237.27921492898093 100.05176047338595) (end 237.51106052898095 98.06524397338596) (angle -33.65685440850834) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 211.922970512417 112.97141232703635) (end 211.014989512417 111.18939932703634) (angle -50.21102213616696) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 205.03292288411404 125.25505760476335) (end 206.09276148411405 126.95115380476335) (angle -45.21102115744566) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 189.26451684786875 135.1082512) (end 189.26451684786875 137.1082512) (angle -32.00000162119363) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 184.05424675213126 135.1082512) (end 182.99440815213126 136.8043474) (angle -32.00000162119363) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 168.28584071588594 125.25505760476334) (end 166.33545681588595 125.69777940476334) (angle -45.21102115745231) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 161.395793087583 112.97141232703643) (end 163.346176987583 112.52869052703643) (angle -50.211022136163905) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 136.03954867101908 100.05176047338597) (end 136.94752967101908 98.26974747338596) (angle -33.656854408507925) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 108.70455381970716 103.24201855944084) (end 108.47270821970716 101.25550205944084) (angle -9.869432819892964) (layer Edge.Cuts) (width 0.15))
+            
+)
+
+        

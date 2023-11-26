@@ -319,8 +319,8 @@ outlines:
       fillet: 2
 
 
-#plate edges defined here-----------------------------------
-  plate_edge:
+#top plate edges defined here-----------------------------------
+  top_plate:
     - what: polygon
       operation: stack
       points:
@@ -527,25 +527,25 @@ pcbs:
           rotate: led_rotation      
 
       upper_out_mounting:
-        what: infused-kim/mounting_hole
+        what: custom_fp/mounting_hole_nosilk
         where: [matrix_pinky_top, mirror_matrix_pinky_top]
         adjust:
           shift: [13, 16]
                 
       upper_in_mounting:
-        what: infused-kim/mounting_hole
+        what: custom_fp/mounting_hole_nosilk
         where: [matrix_index_top, mirror_matrix_index_top]
         adjust:
           shift: [-6, 16]
                 
       lower_out_mounting:
-        what: infused-kim/mounting_hole
+        what: custom_fp/mounting_hole_nosilk
         where: [matrix_pinky_bottom, mirror_matrix_pinky_bottom]
         adjust:
           shift: [16, -5]
                 
       lower_in_mounting:
-        what: infused-kim/mounting_hole
+        what: custom_fp/mounting_hole_nosilk
         where: [thumbfan_far_thumb, mirror_thumbfan_far_thumb]
         adjust:
           shift: [15, 7]
@@ -560,11 +560,11 @@ pcbs:
           shift: [-4,9.5]
           rotate: 0
 
-#plate pcb---------------------------------
-  plate:
+#top plate pcb---------------------------------
+  top_plate:
     outlines:
       main:
-        outline: plate_edge
+        outline: top_plate
     footprints: 
       key_switches:
         what: custom_fp/choc_switch_cutout
@@ -574,25 +574,25 @@ pcbs:
           to: "{{colrow}}"
           
       upper_out_mounting:
-        what: infused-kim/mounting_hole
+        what: custom_fp/mounting_hole_nosilk
         where: [matrix_pinky_top, mirror_matrix_pinky_top]
         adjust:
           shift: [13, 16]
                 
       upper_in_mounting:
-        what: infused-kim/mounting_hole
+        what: custom_fp/mounting_hole_nosilk
         where: [matrix_index_top, mirror_matrix_index_top]
         adjust:
           shift: [-6, 16]
                 
       lower_out_mounting:
-        what: infused-kim/mounting_hole
+        what: custom_fp/mounting_hole_nosilk
         where: [matrix_pinky_bottom, mirror_matrix_pinky_bottom]
         adjust:
           shift: [16, -5]
                 
       lower_in_mounting:
-        what: infused-kim/mounting_hole
+        what: custom_fp/mounting_hole_nosilk
         where: [thumbfan_far_thumb, mirror_thumbfan_far_thumb]
         adjust:
           shift: [15, 7]
@@ -604,4 +604,45 @@ pcbs:
           text: JLCJLCJLCJLC
         adjust:
           shift: [-4,9.5]
+          rotate: 0
+
+
+#bottom plate pcb---------------------------------
+  bottom_plate:
+    outlines:
+      main:
+        outline: board
+    footprints: 
+          
+      upper_out_mounting:
+        what: custom_fp/mounting_hole_nosilk
+        where: [matrix_pinky_top, mirror_matrix_pinky_top]
+        adjust:
+          shift: [13, 16]
+                
+      upper_in_mounting:
+        what: custom_fp/mounting_hole_nosilk
+        where: [matrix_index_top, mirror_matrix_index_top]
+        adjust:
+          shift: [-6, 16]
+                
+      lower_out_mounting:
+        what: custom_fp/mounting_hole_nosilk
+        where: [matrix_pinky_bottom, mirror_matrix_pinky_bottom]
+        adjust:
+          shift: [16, -5]
+                
+      lower_in_mounting:
+        what: custom_fp/mounting_hole_nosilk
+        where: [thumbfan_far_thumb, mirror_thumbfan_far_thumb]
+        adjust:
+          shift: [15, 7]
+
+      jlcpcb_order_number_text:
+        what: infused-kim/text
+        where: thumbfan_far_thumb
+        params:
+          text: JLCJLCJLCJLC
+        adjust:
+          shift: [-4,-9]
           rotate: 0

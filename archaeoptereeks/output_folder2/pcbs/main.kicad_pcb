@@ -8406,7 +8406,7 @@
 
             (module mounting_hole (layer F.Cu) (tedit 64B5A986)
                 (at 98.65220989999999 110.09697709999999 -12)
-                (fp_text reference "H1" (at 0 3) (layer F.SilkS) hide
+                (fp_text reference "H1" (at 0 3) (layer Eco2.User) hide
                     (effects (font (size 1 1) (thickness 0.15)))
                 )
         
@@ -8420,7 +8420,7 @@
 
             (module mounting_hole (layer F.Cu) (tedit 64B5A986)
                 (at 274.66655370000007 110.09697709999999 12)
-                (fp_text reference "H2" (at 0 3) (layer F.SilkS) hide
+                (fp_text reference "H2" (at 0 3) (layer Eco2.User) hide
                     (effects (font (size 1 1) (thickness 0.15)))
                 )
         
@@ -8434,7 +8434,7 @@
 
             (module mounting_hole (layer F.Cu) (tedit 64B5A986)
                 (at 160.37078069999998 115.5924655 -32)
-                (fp_text reference "H3" (at 0 3) (layer F.SilkS) hide
+                (fp_text reference "H3" (at 0 3) (layer Eco2.User) hide
                     (effects (font (size 1 1) (thickness 0.15)))
                 )
         
@@ -8448,7 +8448,7 @@
 
             (module mounting_hole (layer F.Cu) (tedit 64B5A986)
                 (at 212.94798290000003 115.5924655 32)
-                (fp_text reference "H4" (at 0 3) (layer F.SilkS) hide
+                (fp_text reference "H4" (at 0 3) (layer Eco2.User) hide
                     (effects (font (size 1 1) (thickness 0.15)))
                 )
         
@@ -8462,7 +8462,7 @@
 
             (module mounting_hole (layer F.Cu) (tedit 64B5A986)
                 (at 89.3198629 168.43142060000002 -12)
-                (fp_text reference "H5" (at 0 3) (layer F.SilkS) hide
+                (fp_text reference "H5" (at 0 3) (layer Eco2.User) hide
                     (effects (font (size 1 1) (thickness 0.15)))
                 )
         
@@ -8476,7 +8476,7 @@
 
             (module mounting_hole (layer F.Cu) (tedit 64B5A986)
                 (at 283.9989007 168.43142060000002 12)
-                (fp_text reference "H6" (at 0 3) (layer F.SilkS) hide
+                (fp_text reference "H6" (at 0 3) (layer Eco2.User) hide
                     (effects (font (size 1 1) (thickness 0.15)))
                 )
         
@@ -8490,7 +8490,7 @@
 
             (module mounting_hole (layer F.Cu) (tedit 64B5A986)
                 (at 177.3727254 234.7835138 -68)
-                (fp_text reference "H7" (at 0 3) (layer F.SilkS) hide
+                (fp_text reference "H7" (at 0 3) (layer Eco2.User) hide
                     (effects (font (size 1 1) (thickness 0.15)))
                 )
         
@@ -8504,7 +8504,7 @@
 
             (module mounting_hole (layer F.Cu) (tedit 64B5A986)
                 (at 195.9460382 234.7835138 68)
-                (fp_text reference "H8" (at 0 3) (layer F.SilkS) hide
+                (fp_text reference "H8" (at 0 3) (layer Eco2.User) hide
                     (effects (font (size 1 1) (thickness 0.15)))
                 )
         

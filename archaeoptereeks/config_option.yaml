@@ -381,8 +381,8 @@ outlines:
       fillet: 2
 
 
-#inner cutout edges defined here-----------------------------------
-  inner_cutout:
+#top plate edges defined here-----------------------------------
+  inner_cutout_total:
     - what: polygon
       operation: stack
       points:
@@ -408,7 +408,6 @@ outlines:
         - ref: mirror_matrix_inner_top
           shift: [inner_outline, -6]
       fillet: 1
-
 
 #pcb definitions---------------------------------------------------------------------------
 pcbs:
@@ -505,6 +504,44 @@ pcbs:
           shift: [20,51]
           rotate: 0
 
+      encoder:
+        what: custom_fp/rotary_nosilk
+        where:
+          ref.aggregate.parts: [matrix_inner_bottom, mirror_matrix_inner_bottom]
+        params:
+          from: C3
+          to: encoder_to_diode #C2
+          A: SDA
+          B: GND
+          C: SCL
+        adjust:
+          rotate: 90
+          shift: [0,-10]
+
+      diode_encoder:
+        what: diode
+        where:
+          ref.aggregate.parts: [matrix_inner_bottom, mirror_matrix_inner_bottom]
+        params:
+          from: encoder_to_diode
+          to: C2
+        adjust:
+          rotate: 90
+          shift: [9,-12]
+      
+      oled_square:
+        what: custom_fp/oled_128x64_reversable
+        where:
+          ref.aggregate.parts: [matrix_inner_bottom, mirror_matrix_inner_bottom]
+        params:
+          reverse: true
+          show_labels: true
+        adjust:
+          rotate: 0
+          shift: [0,-13]
+        
+
+
       per_key_leds:
         what: sk6812mini-e
         where: [matrix_pinky_top, matrix_pinky_home, matrix_pinky_bottom, matrix_ring_top, matrix_ring_home, 
@@ -580,6 +617,7 @@ pcbs:
         adjust:
           shift: [15, 7]
 
+            
       jlcpcb_order_number_text:
         what: infused-kim/text
         where: matrix_index_home

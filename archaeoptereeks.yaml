@@ -8,6 +8,8 @@ meta:
   footprint: &switch_footprint "choc"
   switch:
     $extends: presets.choc
+#ergogen ./ -o output_folder2
+
 
 presets:
   # These presets provide different layout options
@@ -38,6 +40,7 @@ units:
   px: kx + 2
   py: ky + 2
   board_outline: 10
+  inner_outline: 16
   
   # Physical measures
   screw_radius: 1.1 # M2 screws
@@ -65,7 +68,7 @@ points:
       columns:
         pinky:
           key:
-            column_net: C4
+            column_net: R1
             mirror.column_net: P10
           rows:
             bottom.key:
@@ -81,14 +84,14 @@ points:
             top.key:
               led_prev: LED
               led_next: LED_2
-              mirror_led_prev: LED_37
+              mirror_led_prev: LED_36
         ring:
           key:
             splay: -10
             origin: [-12, -19]
             stagger: 18
-            column_net: CS
-            mirror.column_net: C4
+            column_net: R0
+            mirror.column_net: P16
           rows:
             bottom.key:
               led_prev: LED_4
@@ -110,8 +113,8 @@ points:
             splay: -5
             origin: [-12, -19]
             stagger: 14
-            column_net: R0
-            mirror.column_net: C3
+            column_net: CS
+            mirror.column_net: C5
           rows:
             bottom.key:
               led_prev: LED_9
@@ -133,8 +136,8 @@ points:
             splay: -5
             origin: [-12, -19]
             stagger: -10
-            column_net: R0
-            mirror.column_net: C3
+            column_net: R2
+            mirror.column_net: C4
           rows:
             bottom.key:
               led_prev: LED_10
@@ -154,8 +157,8 @@ points:
         inner:
           key:
             stagger: -2
-            column_net: R1
-            mirror.column_net: C2
+            column_net: R3
+            mirror.column_net: C3
           rows:
             bottom.key:
               led_prev: LED_15
@@ -174,9 +177,9 @@ points:
               mirror_led_next: LED_25
       rows:
         bottom:
-          row_net: R2
+          row_net: C1
         home:
-          row_net: R3
+          row_net: C0
         top:
           row_net: P9
 
@@ -192,8 +195,8 @@ points:
       columns:
         near:
           key:
-            column_net: R1
-            mirror.column_net: C2
+            column_net: R0
+            mirror.column_net: P16
           rows:
             thumb.key:
               led_prev: LED_16
@@ -205,8 +208,8 @@ points:
             spread: 19
             splay: -18
             origin: [-11, -9]
-            column_net: R1
-            mirror.column_net: C2
+            column_net: CS
+            mirror.column_net: C5
           rows:
             thumb.key:
               led_prev: LED_17
@@ -218,8 +221,8 @@ points:
             spread: 19
             splay: -18
             origin: [-10.5, -9]
-            column_net: C1
-            mirror.column_net: C1
+            column_net: R2
+            mirror.column_net: C4
           rows:
             thumb.key:
               led_prev: LED_18
@@ -228,7 +231,7 @@ points:
               mirror_led_next: LED_20
       rows:
         thumb:
-          row_net: C0
+          row_net: C2
   rotate: -20
   mirror:
     ref: matrix_pinky_home
@@ -316,6 +319,95 @@ outlines:
           shift: [-board_outline,board_outline]
       fillet: 2
 
+
+#top plate edges defined here-----------------------------------
+  top_plate:
+    - what: polygon
+      operation: stack
+      points:
+          #left side
+        - ref: matrix_pinky_top
+          shift: [-board_outline,board_outline]
+        - ref: matrix_pinky_bottom
+          shift: [-board_outline,-board_outline]
+        - ref: matrix_pinky_bottom
+          shift: [board_outline + 11,-board_outline]
+
+          #bottom
+        - ref: thumbfan_home_thumb
+          shift: [-.55kx,-board_outline]
+        - ref: thumbfan_home_thumb
+          shift: [.4kx,-board_outline]
+        - ref: thumbfan_far_thumb
+          shift: [.7kx,-board_outline]
+        - ref: mirror_thumbfan_far_thumb
+          shift: [.7kx,-board_outline]
+        - ref: mirror_thumbfan_home_thumb
+          shift: [.4kx,-board_outline]
+        - ref: mirror_thumbfan_home_thumb
+          shift: [-.55kx,-board_outline]
+          
+          #right side
+        - ref: mirror_matrix_pinky_bottom
+          shift: [board_outline + 11,-board_outline]
+        - ref: mirror_matrix_pinky_bottom
+          shift: [-board_outline,-board_outline]
+        - ref: mirror_matrix_pinky_top
+          shift: [-board_outline,board_outline]
+
+          #right top
+        - ref: mirror_matrix_ring_top
+          shift: [-board_outline,board_outline]
+        - ref: mirror_matrix_middle_top
+          shift: [-board_outline,board_outline]
+        - ref: mirror_matrix_middle_top
+          shift: [20,board_outline]
+        - ref: mirror_matrix_index_top
+          shift: [5,board_outline]
+        - ref: mirror_matrix_index_top
+          shift: [25,board_outline]
+
+          #left top
+        - ref: matrix_index_top
+          shift: [25,board_outline]
+        - ref: matrix_index_top
+          shift: [5,board_outline]
+        - ref: matrix_middle_top
+          shift: [20,board_outline]
+        - ref: matrix_middle_top
+          shift: [-board_outline,board_outline]
+        - ref: matrix_ring_top
+          shift: [-board_outline,board_outline]
+      fillet: 2
+
+
+#top plate edges defined here-----------------------------------
+  inner_cutout_total:
+    - what: polygon
+      operation: stack
+      points:
+          #left side
+        - ref: matrix_inner_top
+          shift: [inner_outline, -6]
+        - ref: matrix_inner_bottom
+          shift: [inner_outline, -board_outline+2]
+
+          #bottom
+        - ref: thumbfan_home_thumb
+          shift: [0, inner_outline-2]
+        - ref: thumbfan_far_thumb
+          shift: [0, inner_outline-2]
+        - ref: mirror_thumbfan_far_thumb
+          shift: [0, inner_outline-2]
+        - ref: mirror_thumbfan_home_thumb
+          shift: [0, inner_outline-2]
+          
+          #right side
+        - ref: mirror_matrix_inner_bottom
+          shift: [inner_outline, -board_outline+2]
+        - ref: mirror_matrix_inner_top
+          shift: [inner_outline, -6]
+      fillet: 1
 
 #pcb definitions---------------------------------------------------------------------------
 pcbs:
@@ -461,5 +553,124 @@ pcbs:
           via_drill: via_drill
         adjust:
           shift: [led_pos_x, led_pos_y]
-          rotate: led_rotation      
+          rotate: led_rotation    
+      
+      upper_out_mounting:
+        what: custom_fp/mounting_hole_nosilk
+        where: [matrix_pinky_top, mirror_matrix_pinky_top]
+        adjust:
+          shift: [13, 16]
+                
+      upper_in_mounting:
+        what: custom_fp/mounting_hole_nosilk
+        where: [matrix_index_top, mirror_matrix_index_top]
+        adjust:
+          shift: [-6, 16]
+                
+      lower_out_mounting:
+        what: custom_fp/mounting_hole_nosilk
+        where: [matrix_pinky_bottom, mirror_matrix_pinky_bottom]
+        adjust:
+          shift: [16, -5]
+                
+      lower_in_mounting:
+        what: custom_fp/mounting_hole_nosilk
+        where: [thumbfan_far_thumb, mirror_thumbfan_far_thumb]
+        adjust:
+          shift: [15, 7]
+
+      jlcpcb_order_number_text:
+        what: infused-kim/text
+        where: matrix_index_home
+        params:
+          text: JLCJLCJLCJLC
+        adjust:
+          shift: [-4,9.5]
+          rotate: 0
+
+#top plate pcb---------------------------------
+  top_plate:
+    outlines:
+      main:
+        outline: top_plate
+    footprints: 
+      key_switches:
+        what: custom_fp/choc_switch_cutout
+        where: true
+        params:
+          from: "{{column_net}}"
+          to: "{{colrow}}"
           
+      upper_out_mounting:
+        what: custom_fp/mounting_hole_nosilk
+        where: [matrix_pinky_top, mirror_matrix_pinky_top]
+        adjust:
+          shift: [13, 16]
+                
+      upper_in_mounting:
+        what: custom_fp/mounting_hole_nosilk
+        where: [matrix_index_top, mirror_matrix_index_top]
+        adjust:
+          shift: [-6, 16]
+                
+      lower_out_mounting:
+        what: custom_fp/mounting_hole_nosilk
+        where: [matrix_pinky_bottom, mirror_matrix_pinky_bottom]
+        adjust:
+          shift: [16, -5]
+                
+      lower_in_mounting:
+        what: custom_fp/mounting_hole_nosilk
+        where: [thumbfan_far_thumb, mirror_thumbfan_far_thumb]
+        adjust:
+          shift: [15, 7]
+
+      jlcpcb_order_number_text:
+        what: infused-kim/text
+        where: matrix_index_home
+        params:
+          text: JLCJLCJLCJLC
+        adjust:
+          shift: [-4,9.5]
+          rotate: 0
+
+
+#bottom plate pcb---------------------------------
+  bottom_plate:
+    outlines:
+      main:
+        outline: board
+    footprints: 
+          
+      upper_out_mounting:
+        what: custom_fp/mounting_hole_nosilk
+        where: [matrix_pinky_top, mirror_matrix_pinky_top]
+        adjust:
+          shift: [13, 16]
+                
+      upper_in_mounting:
+        what: custom_fp/mounting_hole_nosilk
+        where: [matrix_index_top, mirror_matrix_index_top]
+        adjust:
+          shift: [-6, 16]
+                
+      lower_out_mounting:
+        what: custom_fp/mounting_hole_nosilk
+        where: [matrix_pinky_bottom, mirror_matrix_pinky_bottom]
+        adjust:
+          shift: [16, -5]
+                
+      lower_in_mounting:
+        what: custom_fp/mounting_hole_nosilk
+        where: [thumbfan_far_thumb, mirror_thumbfan_far_thumb]
+        adjust:
+          shift: [15, 7]
+
+      jlcpcb_order_number_text:
+        what: infused-kim/text
+        where: thumbfan_far_thumb
+        params:
+          text: JLCJLCJLCJLC
+        adjust:
+          shift: [-4,-9]
+          rotate: 0
